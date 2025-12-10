@@ -76,3 +76,4 @@ The project leverages a cloud-native, serverless architecture to ensure scalabil
 To run a scan on a local directory:
 ```bash
 python src/main.py --scan ./vulnerable-app --fix --benchmark
+

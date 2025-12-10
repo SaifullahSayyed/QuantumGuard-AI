@@ -247,35 +247,31 @@
 
     <section id="slide-4" class="slide bg-cover bg-center" style="background-image: url('http://googleusercontent.com/image_collection/image_retrieval/9696618008560330002');">
         <div class="absolute inset-0 bg-[#020617]/90"></div>
-        <div class="relative z-10 w-full max-w-6xl flex flex-col items-center justify-center h-full">
+
+        <div class="relative z-10 w-full max-w-6xl">
+            <h2 class="text-5xl font-bold mb-16 text-center">Built with <span class="gradient-text">Google Cloud</span></h2>
             
-            <div class="glass-panel p-16 rounded-3xl text-center border-blue-500/30 shadow-2xl shadow-blue-500/10 max-w-3xl w-full transform hover:scale-105 transition-transform duration-500">
-                <div class="flex items-center justify-center mb-8 relative">
-                    <div class="relative">
-                        <i data-lucide="brain-circuit" class="w-32 h-32 text-blue-500 opacity-50 absolute top-0 left-1/2 -translate-x-1/2 animate-pulse"></i>
-                        <i data-lucide="bot" class="w-24 h-24 text-cyan-400 relative z-10"></i>
-                        <i data-lucide="sparkles" class="w-12 h-12 text-yellow-400 absolute -top-2 -right-4 z-20 animate-bounce"></i>
-                    </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="glass-panel p-8 rounded-2xl text-center hover:bg-slate-800/80 transition-all transform hover:-translate-y-2 group border-blue-500/30 flex flex-col justify-center">
+                    <h3 class="font-bold text-xl mb-2 text-blue-400">Vertex AI</h3>
+                    <p class="text-sm text-slate-400">Agent Builder & Gemini 2.0</p>
                 </div>
-                
-                <h2 class="text-6xl font-black tracking-tight mb-2">
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">Vertex AI</span>
-                </h2>
-                <h3 class="text-4xl font-bold text-cyan-400 mb-6">Agent Builder & Gemini 2.0</h3>
-                
-                <div class="flex justify-center gap-4 mb-10">
-                    <span class="px-4 py-2 rounded-full bg-blue-500/20 text-blue-300 text-sm font-mono border border-blue-500/30">Multi-Agent Orchestration</span>
-                    <span class="px-4 py-2 rounded-full bg-cyan-500/20 text-cyan-300 text-sm font-mono border border-cyan-500/30">NIST PQC RAG</span>
-                    <span class="px-4 py-2 rounded-full bg-purple-500/20 text-purple-300 text-sm font-mono border border-purple-500/30">Cloud Run Sandbox</span>
+                 <div class="glass-panel p-8 rounded-2xl text-center hover:bg-slate-800/80 transition-all transform hover:-translate-y-2 group border-orange-500/30 flex flex-col justify-center">
+                    <h3 class="font-bold text-xl mb-2 text-orange-400">Firebase</h3>
+                    <p class="text-sm text-slate-400">Auth & Hosting</p>
                 </div>
-                
-                <p class="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-                    The entire platform is powered by a single, unified brain designed for secure, autonomous code generation in the post-quantum era.
-                </p>
+                 <div class="glass-panel p-8 rounded-2xl text-center hover:bg-slate-800/80 transition-all transform hover:-translate-y-2 group border-cyan-500/30 flex flex-col justify-center">
+                    <h3 class="font-bold text-xl mb-2 text-cyan-400">Cloud Run</h3>
+                    <p class="text-sm text-slate-400">Serverless Sandbox</p>
+                </div>
+                 <div class="glass-panel p-8 rounded-2xl text-center hover:bg-slate-800/80 transition-all transform hover:-translate-y-2 group border-green-500/30 flex flex-col justify-center">
+                    <h3 class="font-bold text-xl mb-2 text-green-400">AI Studio</h3>
+                    <p class="text-sm text-slate-400">Prototyping & API</p>
+                </div>
             </div>
 
             <div class="mt-20 text-center">
-                <a href="https://github.com/SaifullahSayyed/QuantumGuard-AI" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/SaifullahSayyed/QuantumGuard-AI" target="_blank" rel="noopener noreferrer" class="inline-block">
                     <button class="bg-gradient-to-r from-cyan-500 to-blue-600 px-10 py-4 rounded-full font-bold text-xl text-white shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/60 transition-all transform hover:-translate-y-1 active:scale-95 cursor-pointer">
                         View GitHub Repo <i data-lucide="arrow-right" class="inline ml-2 w-5 h-5"></i>
                     </button>
@@ -292,6 +288,7 @@
         function goToSlide(index) {
             document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
             document.querySelectorAll('[id^="dot-"]').forEach(d => d.classList.replace('bg-cyan-400', 'bg-slate-600'));
+            
             document.getElementById(`slide-${index}`).classList.add('active');
             document.getElementById(`dot-${index}`).classList.replace('bg-slate-600', 'bg-cyan-400');
             currentSlide = index;
@@ -314,6 +311,7 @@
             }
         });
         
+        // Initial load
         goToSlide(0);
     </script>
 </body>

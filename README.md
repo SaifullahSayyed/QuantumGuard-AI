@@ -50,30 +50,3 @@ The project leverages a cloud-native, serverless architecture to ensure scalabil
 * Google Cloud Platform Account (Active Project)
 * `gcloud` CLI installed
 
-### Installation
-
-1.  **Clone the Repository**
-    ```bash
-    git clone [https://github.com/SaifullahSayyed/QuantumGuard-AI.git](https://github.com/SaifullahSayyed/QuantumGuard-AI.git)
-    cd QuantumGuard-AI
-    ```
-
-2.  **Install Dependencies**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3.  **Set up Environment Variables**
-    Create a `.env` file:
-    ```bash
-    GOOGLE_APPLICATION_CREDENTIALS="path/to/your/key.json"
-    PROJECT_ID="your-gcp-project-id"
-    REGION="us-central1"
-    ```
-
-### Usage (CLI Mode)
-
-To run a scan on a local directory:
-```bash
-python src/main.py --scan ./vulnerable-app --fix --benchmark
-
